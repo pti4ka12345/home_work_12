@@ -1,0 +1,13 @@
+<!DOCTYPE html >
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Skypro</title>
+  </head>
+  <body>
+<h1>Все кандидаты</h1>
+{% for can in cans %}
+<p><a href="/candidate/{{ can.id }}">{{ can.name }}</a></p>
+{% endfor %}
+  </body>
+</html>
