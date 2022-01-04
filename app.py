@@ -17,7 +17,7 @@ def page_index():
 @app.route("/list")
 def page_list_of_candidates():
     cans = get_candidates()
-    return render_template("list.html", can=cans)
+    return render_template("list.html", cans=cans)
 
 
 @app.route("/candidate/<int:can_id>")
@@ -37,11 +37,11 @@ def page_search_by_name():
 
 
 @app.route("/skill/<skill_name>")
-def page_search_by_scill():
-    name = request.args['skillname']
+def page_search_by_skill():
+    # name = request.args['skillname']
 
-    cans = candidates_by_skill(skill_name)
+    cans = candidates_by_skill(skillname)
     cans_count = len(cans)
-    return render_template("skill.html", skill_name=skill_name, cans=cans)
+    return render_template("skill.html", skill_name=skillname, cans=cans, cans_count=cans_count)
 
 app.run()

@@ -16,7 +16,7 @@ def get_candidate_by_id(can_id):
     """
     возвращает кандидата по его id з файла
     """
-    candidates = get_candidats()
+    candidates = get_candidates()
 
     for can in candidates:
         if can_id == can["id"]:
